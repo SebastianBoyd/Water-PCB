@@ -9949,8 +9949,9 @@ Source: http://www.seoulsemicon.co.kr .. X42180.pdf</description>
 <part name="C1" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="CPOL-EU" device="E5-10.5" value="470uf"/>
 <part name="C2" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="CPOL-EU" device="E5-10.5" value="470uf"/>
 <part name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="X42180" device=""/>
-<part name="LED2" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="X42180" device=""/>
-<part name="LED3" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="X42180" device=""/>
+<part name="+3V4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="R5" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R1206"/>
 </parts>
 <sheets>
 <sheet>
@@ -9989,9 +9990,10 @@ Source: http://www.seoulsemicon.co.kr .. X42180.pdf</description>
 <instance part="GND8" gate="1" x="48.26" y="83.82"/>
 <instance part="C1" gate="G$1" x="160.02" y="93.98"/>
 <instance part="C2" gate="G$1" x="170.18" y="93.98"/>
-<instance part="LED1" gate="G$1" x="185.42" y="30.48"/>
-<instance part="LED2" gate="G$1" x="205.74" y="30.48"/>
-<instance part="LED3" gate="G$1" x="226.06" y="30.48"/>
+<instance part="LED1" gate="G$1" x="172.72" y="48.26"/>
+<instance part="+3V4" gate="G$1" x="172.72" y="63.5"/>
+<instance part="GND7" gate="1" x="172.72" y="40.64"/>
+<instance part="R5" gate="G$1" x="172.72" y="55.88" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -10090,6 +10092,10 @@ Source: http://www.seoulsemicon.co.kr .. X42180.pdf</description>
 <pinref part="SV1" gate="G$1" pin="2"/>
 <wire x1="170.18" y1="81.28" x2="177.8" y2="81.28" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="LED1" gate="G$1" pin="C"/>
+<pinref part="GND7" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="N$5" class="0">
 <segment>
@@ -10181,6 +10187,10 @@ Source: http://www.seoulsemicon.co.kr .. X42180.pdf</description>
 <wire x1="170.18" y1="96.52" x2="160.02" y2="96.52" width="0.1524" layer="91"/>
 <junction x="170.18" y="96.52"/>
 <junction x="160.02" y="96.52"/>
+</segment>
+<segment>
+<pinref part="R5" gate="G$1" pin="2"/>
+<pinref part="+3V4" gate="G$1" pin="+3V3"/>
 </segment>
 </net>
 <net name="N$15" class="0">
@@ -10280,6 +10290,12 @@ Source: http://www.seoulsemicon.co.kr .. X42180.pdf</description>
 <pinref part="X5" gate="-1" pin="KL"/>
 <wire x1="109.22" y1="83.82" x2="129.54" y2="83.82" width="0.1524" layer="91"/>
 <junction x="109.22" y="83.82"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<pinref part="LED1" gate="G$1" pin="A"/>
+<pinref part="R5" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>
