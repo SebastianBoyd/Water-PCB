@@ -9794,6 +9794,122 @@ general purpose rectifier, 1 A</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="led" urn="urn:adsk.eagle:library:259">
+<description>&lt;b&gt;LEDs&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;&lt;br&gt;
+Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternational.com&amp;gt;&lt;/author&gt; with DUOLED</description>
+<packages>
+<package name="Z-POWER-LED-DOME-TYPE" library_version="1">
+<description>&lt;b&gt;Z-Power LED&lt;/b&gt;&lt;p&gt;
+Source: http://www.seoulsemicon.co.kr .. X42180.pdf</description>
+<wire x1="3.55" y1="1.475" x2="3.55" y2="-1.475" width="0.3" layer="21"/>
+<wire x1="3.55" y1="-1.475" x2="-3.55" y2="-1.475" width="0.3" layer="21" curve="-135.131159"/>
+<wire x1="-3.55" y1="-1.475" x2="-3.55" y2="1.475" width="0.3" layer="21"/>
+<wire x1="-3.55" y1="1.475" x2="3.55" y2="1.475" width="0.3" layer="21" curve="-135.136675"/>
+<circle x="0" y="0" radius="3.2" width="0" layer="29"/>
+<smd name="A" x="-6.65" y="-1.12" dx="3.3" dy="2.1" layer="1"/>
+<smd name="C" x="6.65" y="1.12" dx="3.3" dy="2.1" layer="1"/>
+<text x="-2.54" y="4.445" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.81" y="-5.715" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="3.625" y1="0.75" x2="5.625" y2="1.45" layer="51" rot="R180"/>
+<rectangle x1="-7.25" y1="-1.85" x2="-5.625" y2="-0.35" layer="51"/>
+<rectangle x1="5.625" y1="0.35" x2="7.25" y2="1.85" layer="51" rot="R180"/>
+<rectangle x1="-4.5" y1="0.75" x2="-3.55" y2="1.45" layer="21"/>
+<rectangle x1="-5.625" y1="-1.45" x2="-3.525" y2="-0.75" layer="51"/>
+<rectangle x1="-4.7" y1="-1.45" x2="-3.525" y2="-0.75" layer="21"/>
+<rectangle x1="3.5" y1="0.75" x2="4.675" y2="1.45" layer="21"/>
+<polygon width="0.3" layer="1">
+<vertex x="-8.35" y="6"/>
+<vertex x="-8.35" y="0.375"/>
+<vertex x="-4.55" y="0.375"/>
+<vertex x="-4.55" y="-2.625"/>
+<vertex x="-8.35" y="-2.625"/>
+<vertex x="-8.35" y="-6"/>
+<vertex x="8.35" y="-6"/>
+<vertex x="8.35" y="-0.375"/>
+<vertex x="4.55" y="-0.375"/>
+<vertex x="4.55" y="2.625"/>
+<vertex x="8.35" y="2.625"/>
+<vertex x="8.35" y="6"/>
+</polygon>
+<polygon width="0.1" layer="21">
+<vertex x="3.65" y="-0.8"/>
+<vertex x="4.45" y="-0.8"/>
+<vertex x="4.45" y="-0.85" curve="186.025575"/>
+<vertex x="4.45" y="-1.325"/>
+<vertex x="4.45" y="-1.4"/>
+<vertex x="3.65" y="-1.4"/>
+</polygon>
+<polygon width="0.2" layer="31">
+<vertex x="-0.375" y="0"/>
+<vertex x="-2.2" y="1.825" curve="81.736452"/>
+<vertex x="-2.2" y="-1.825"/>
+</polygon>
+<polygon width="0.2" layer="31">
+<vertex x="0" y="-0.375"/>
+<vertex x="-1.825" y="-2.2" curve="81.736452"/>
+<vertex x="1.825" y="-2.2"/>
+</polygon>
+<polygon width="0.2" layer="31">
+<vertex x="0.375" y="0"/>
+<vertex x="2.2" y="-1.825" curve="81.736452"/>
+<vertex x="2.2" y="1.825"/>
+</polygon>
+<polygon width="0.2" layer="31">
+<vertex x="0" y="0.375"/>
+<vertex x="1.825" y="2.2" curve="81.736452"/>
+<vertex x="-1.825" y="2.2"/>
+</polygon>
+</package>
+</packages>
+<symbols>
+<symbol name="LED" library_version="1">
+<wire x1="1.27" y1="0" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-2.032" y1="-0.762" x2="-3.429" y2="-2.159" width="0.1524" layer="94"/>
+<wire x1="-1.905" y1="-1.905" x2="-3.302" y2="-3.302" width="0.1524" layer="94"/>
+<text x="3.556" y="-4.572" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="5.715" y="-4.572" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="C" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="A" x="0" y="2.54" visible="off" length="short" direction="pas" rot="R270"/>
+<polygon width="0.1524" layer="94">
+<vertex x="-3.429" y="-2.159"/>
+<vertex x="-3.048" y="-1.27"/>
+<vertex x="-2.54" y="-1.778"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="-3.302" y="-3.302"/>
+<vertex x="-2.921" y="-2.413"/>
+<vertex x="-2.413" y="-2.921"/>
+</polygon>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="X42180" prefix="LED" library_version="1">
+<description>&lt;b&gt;Z-Power LED&lt;/b&gt; P4 Series, Dome type&lt;p&gt;
+Source: http://www.seoulsemicon.co.kr .. X42180.pdf</description>
+<gates>
+<gate name="G$1" symbol="LED" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="Z-POWER-LED-DOME-TYPE">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -9832,6 +9948,9 @@ general purpose rectifier, 1 A</description>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C1" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="CPOL-EU" device="E5-10.5" value="470uf"/>
 <part name="C2" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="CPOL-EU" device="E5-10.5" value="470uf"/>
+<part name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="X42180" device=""/>
+<part name="LED2" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="X42180" device=""/>
+<part name="LED3" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="X42180" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9870,6 +9989,9 @@ general purpose rectifier, 1 A</description>
 <instance part="GND8" gate="1" x="48.26" y="83.82"/>
 <instance part="C1" gate="G$1" x="160.02" y="93.98"/>
 <instance part="C2" gate="G$1" x="170.18" y="93.98"/>
+<instance part="LED1" gate="G$1" x="185.42" y="30.48"/>
+<instance part="LED2" gate="G$1" x="205.74" y="30.48"/>
+<instance part="LED3" gate="G$1" x="226.06" y="30.48"/>
 </instances>
 <busses>
 </busses>
